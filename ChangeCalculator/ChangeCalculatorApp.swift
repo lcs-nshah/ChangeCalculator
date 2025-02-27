@@ -11,7 +11,7 @@ import SwiftUI
 struct ChangeCalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChangeView()
         }
     }
 }
