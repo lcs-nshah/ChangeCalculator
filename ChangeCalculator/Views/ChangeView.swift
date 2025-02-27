@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ChangeView: View {
+    
+    // MARK: Stored Properties
+    @State var viewModel = ChangeViewModel()
+    
+    // MARK: Computed Properties
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            // MARK: INPUT
+            Text("Amount In Cents:")
+//                .font
+            
+            TextField("E.g. 250", text: $viewModel.providedAmountInCents)
+            
+            
+            
         }
         .padding()
+        .navigationTitle("Change Calculator")
     }
 }
 
 #Preview {
-    ChangeView()
+    NavigationStack {
+        ChangeView()
+    }
 }
